@@ -1,0 +1,54 @@
+/* Color Theme and Typography */
+:root {
+    --primary: #FF5A00;
+    --dark-brown: #4A2A12;
+    --cream: #FFF8EF;
+    --gold: #E7B100;
+    --secondary-orange: #FF8C29;
+}
+
+/* Background & Main text */
+.stApp {
+    background-color: var(--cream);
+    color: var(--dark-brown);
+}
+
+/* Rounded Cards with Shadows */
+.sbsby-card, .bb-card, .metric-pill {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--primary);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-brown), #2A180A);
+    color: var(--cream);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 { color: var(--primary); font-size: 3rem; margin-bottom: 0; }
+.hero-section h2 { color: var(--gold); font-size: 1.5rem; margin-top: 0; }
+
+/* Sticky Mobile Hamburger Adjustments */
+@media (max-width: 768px) {
+    [data-testid="collapsedControl"] {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        background-color: var(--dark-brown);
+        border-radius: 0 0 10px 0;
+    }
+    .stTabs [data-baseweb="tab-list"] {
+        flex-direction: column;
+    }
+}
